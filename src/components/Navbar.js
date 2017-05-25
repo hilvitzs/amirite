@@ -6,8 +6,7 @@ export const Navbar = () => {
     <section>
       <Route exact path='/News' render={() => {
         <NavLink to='/News' activeClassName='selected'>News</NavLink>
-      }}
-      </Route>
+      }} />
     </section>
   )
 }
