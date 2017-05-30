@@ -3,6 +3,7 @@ import { addQuestion } from '../actions/actions';
 import PersonalQuestion from './PersonalQuestion';
 
 const mapStateToProps = (state) => {
+  console.log(state.submitQuestion);
   return { question: state.submitQuestion}
 }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Link, Switch } from 'react-router-dom';
 import './App.css';
 
 import PersonalQuestionContainer from './PersonalQuestionContainer'
@@ -9,8 +10,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PersonalQuestionContainer />
-        <News />
+        <Switch>
+        <Route exact path='/' render={() => {
+          return (
+          <PersonalQuestionContainer />
+          )
+        }}/>
+        <Route exact path='/Home' render={() => {
+          return (
+            <News />
+          )
+        }}/>
+      </Switch>
       </div>
     );
   }
