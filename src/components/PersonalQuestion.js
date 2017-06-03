@@ -8,7 +8,7 @@ class PersonalQuestion extends Component {
   }
 
   render() {
-    const { handleSubmit, questions } = this.props;
+    const { handleSubmit, questions, handleScoreChange } = this.props;
 
     return(
       <section>
@@ -17,10 +17,14 @@ class PersonalQuestion extends Component {
                onChange={e => this.setState({ question: e.target.value})} />
         <button onClick={e => handleSubmit(this.state.question, Date.now())}>Submit Question</button>
         <div>
-          {questions.map((question, id) => {
-            console.log(question);
+          {questions.map((question) => {
             return (
-              <section key={id}>{question.question}</section>
+              <section key={question.id}>
+                <p>{question.question}</p>
+                <p>{question.score}</p>
+                <button onClick={e => handleScoreChange(question.id)}>Upvote</button>
+                <button>Downvote</button>
+              </section>
             )
           })}
         </div>
