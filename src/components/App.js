@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import PersonalQuestionContainer from './PersonalQuestionContainer'
-import News from './News';
+import NewsContainer from './NewsContainer';
 
 
 class App extends Component {
@@ -16,9 +16,9 @@ class App extends Component {
           <PersonalQuestionContainer />
           )
         }}/>
-        <Route exact path='/Home' render={() => {
+        <Route exact path='/News' render={() => {
           return (
-            <News />
+            <NewsContainer />
           )
         }}/>
       </Switch>
