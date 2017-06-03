@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import key from '../key';
+import React from 'react';
 
-class News extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      news: [],
-    }
-  }
-
-
-  componentWillMount () {
-    fetch(`https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=${key}`)
-      .then(response => response.json())
-      .then(news => console.log(news))
-  }
-
-
-  render () {
+const News = ({ news }) => {
+  if (!news) {
     return(
-      <section>News</section>
+      <section>loading...</section>
     )
   }
+  console.log(news);
+  return(
+    <section>
+      {news.map((article, index) => {
+        return (
+          <section key={index}>
+            <p>{article.title}</p>
+            <p>{article.author}</p>
+            <p>{article.description}</p>
+            <img src={article.urlToImage} alt='news-article'/>
+          </section>
+        )
+      })}
+    </section>
+  )
 }
 
 export default News;
