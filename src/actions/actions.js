@@ -25,3 +25,10 @@ export const getNews = () => {
     })
   }
 }
+
+export const increaseScore = (id) => {
+  return {
+    type: 'INCREASE_SCORE',
+    id
+  }
+}
