@@ -32,3 +32,10 @@ export const increaseScore = (id) => {
     id
   }
 }
+
+export const decreaseScore = (id) => {
+  return {
+    type: 'DECREASE_SCORE',
+    id
+  }
+}
