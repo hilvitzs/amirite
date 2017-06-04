@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import D3PieChartExample from './ReactExample';
+
 
 class PersonalQuestion extends Component {
   constructor(props) {
+    console.log(props);
     super(props)
 
     this.state = { question: '' }
   }
 
   render() {
-    const { handleSubmit, questions, handleScoreChange } = this.props;
+    const { handleSubmit, questions, handleScoreIncrease, handleScoreDecrease } = this.props;
 
     return(
       <section>
@@ -21,9 +24,11 @@ class PersonalQuestion extends Component {
             return (
               <section key={question.id}>
                 <p>{question.question}</p>
-                <p>{question.score}</p>
-                <button onClick={e => handleScoreChange(question.id)}>Upvote</button>
-                <button>Downvote</button>
+                <p>{question.sideOne}</p>
+                <p>{question.sideTwo}</p>
+                <button onClick={e => handleScoreIncrease(question.id)}>Upvote</button>
+                <button onClick={e => handleScoreDecrease(question.id)}>Downvote</button>
+                <D3PieChartExample sideOne={question.sideOne} sideTwo={question.sideTwo} />
               </section>
             )
           })}

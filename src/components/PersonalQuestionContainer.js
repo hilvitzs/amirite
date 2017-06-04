@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { addQuestion } from '../actions/actions';
 import { increaseScore } from '../actions/actions';
+import { decreaseScore } from '../actions/actions';
 import PersonalQuestion from './PersonalQuestion';
 
 const mapStateToProps = (state) => {
@@ -13,8 +14,12 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(addQuestion(question, id))
     },
 
-    handleScoreChange: (id) => {
+    handleScoreIncrease: (id) => {
       dispatch(increaseScore(id))
+    },
+
+    handleScoreDecrease: (id) => {
+      dispatch(decreaseScore(id))
     }
   }
 }

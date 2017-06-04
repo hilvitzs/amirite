@@ -16,7 +16,7 @@ class App extends Component {
           <PersonalQuestionContainer />
           )
         }}/>
-        <Route exact path='/News' render={() => {
+        <Route exact path='/news' render={() => {
           return (
             <NewsContainer />
           )
