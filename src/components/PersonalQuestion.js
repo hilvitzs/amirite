@@ -24,10 +24,8 @@ class PersonalQuestion extends Component {
             return (
               <section key={question.id}>
                 <p>{question.question}</p>
-                <p>{question.sideOne}</p>
-                <p>{question.sideTwo}</p>
-                <button onClick={e => handleScoreIncrease(question.id)}>Upvote</button>
-                <button onClick={e => handleScoreDecrease(question.id)}>Downvote</button>
+                <button onClick={e => handleScoreIncrease(question.id)}>Vote for Side One</button>
+                <button onClick={e => handleScoreDecrease(question.id)}>Vote for Side Two</button>
                 <D3PieChartExample sideOne={question.sideOne} sideTwo={question.sideTwo} />
               </section>
             )

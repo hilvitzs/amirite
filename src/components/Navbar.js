@@ -1,12 +1,13 @@
 import React from 'react';
-import { NavLink, Switch, Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export const Navbar = () => {
+const Navbar = () => {
   return(
     <section>
-      <Route exact path='/News' render={() => {
-        <NavLink to='/News' activeClassName='selected'>News</NavLink>
-      }} />
+      <NavLink to='/news' activeClassName='selected'>News</NavLink>
+      <NavLink to='/submitQuestion' activeClassName='selected'>Submit Question</NavLink>
     </section>
   )
 }
+
+export default Navbar;
