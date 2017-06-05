@@ -17,7 +17,23 @@ describe('Submit Question', () => {
   ]
 
   const mockFn = jest.fn();
-  const wrapper = shallow(<SubmitQuestion history={{}} questions={questions} handleSubmit={mockFn}/>)
+
+  const history = {
+    action: "PUSH",
+    blocK: mockFn,
+    createHref: mockFn,
+    go: mockFn,
+    goBack: mockFn,
+    goForward: mockFn,
+    length: 50,
+    listen: mockFn,
+    location: {},
+    push: mockFn,
+    replace: mockFn,
+  }
+
+  const wrapper = shallow(<SubmitQuestion history={history} questions={questions} handleSubmit={mockFn}/>)
+
 
   it('should render a SubmitQuestion', () => {
     expect(wrapper).toHaveLength(1)
@@ -40,6 +56,6 @@ describe('Submit Question', () => {
 
     button.simulate('click')
 
-    expect(handleSubmit).toHaveBeenCalled(1)
+    expect(mockFn).toHaveBeenCalled(1)
   })
 })
