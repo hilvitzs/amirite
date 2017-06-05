@@ -9,6 +9,7 @@ export const addQuestion = (question, id) => {
 }
 
 export const accessNews = (news) => {
+  console.log(news);
   return {
     type: 'ACCESS_NEWS',
     news
@@ -26,16 +27,16 @@ export const getNews = () => {
   }
 }
 
-export const increaseScore = (id) => {
+export const increaseSideOne = (id) => {
   return {
-    type: 'INCREASE_SCORE',
+    type: 'INCREASE_SIDEONE',
     id
   }
 }
 
-export const decreaseScore = (id) => {
+export const increaseSideTwo = (id) => {
   return {
-    type: 'DECREASE_SCORE',
+    type: 'INCREASE_SIDETWO',
     id
   }
 }

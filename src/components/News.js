@@ -9,7 +9,8 @@ const News = ({ news }) => {
   }
 
   return(
-    <section>
+    <section className='news-section'>
+      <h1>News</h1>
       {news.map((article, index) => {
         return (
           <section key={index} className='news-section'>

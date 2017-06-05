@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', serif;
+  background-color: #F4F4F6;
 }
 
 .App-logo {
@@ -24,19 +25,11 @@ body {
 }
 
 .full-article {
-  border: 1px solid black;
-  height: 500px;
+  background-color: #E6E6E9;
+  height: 400px;
   display: flex;
   width: 90%;
   margin: 25px auto;
-}
-
-.img-container {
-  height: 500px;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .news-img {
@@ -58,4 +51,75 @@ body {
 
 .article-author {
   font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+.current-question {
+  background-color: #E6E6E9;
+  width: 90%;
+  margin: 25px auto;
+  display: flex;
+}
+
+.piechart-container {
+  height: 400px;
+  width: 50%;
+  text-align: center;
+}
+
+.question-container {
+  width: 50%;
+}
+
+.question {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+button {
+  margin: 0 25px;
+}
+
+svg {
+  display: block;
+  margin: auto;
+}
+
+.navlink-container {
+  height: 40px;
+  text-align: right;
+  background-color: #F4F4F6;
+  border-bottom: 1px solid black;
+}
+
+.navlink {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 15px;
+}
+
+.selected {
+  color: blue;
+}
+
+input {
+  width: 800px;
+  height: 20px;
+  border: none;
+}
+
+.submit-container {
+  text-align: center;
+}
+
+.submit-button {
+  display: block;
+  margin: 15px auto;
+  width: 400px;
+  height: 50px;
+  background-color: #E6E6E9;
+  border: none;
 }

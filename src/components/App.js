@@ -22,7 +22,9 @@ class App extends Component {
           <Route exact path='/' render={() => {
             return (
               <section>
-                <Navbar />
+                <div className='header'>
+                  <Navbar />
+                </div>
                 <SubmitQuestionContainer history={history}/>
               </section>
             )
@@ -30,7 +32,9 @@ class App extends Component {
           <Route exact path='/submitQuestion' render={() => {
             return (
               <section>
-                <Navbar />
+                <div className='header'>
+                  <Navbar />
+                </div>
                 <SubmitQuestionContainer history={history}/>
               </section>
             )
@@ -38,7 +42,9 @@ class App extends Component {
           <Route exact path='/news' render={() => {
             return (
               <section>
-                <Navbar />
+                <div className='header'>
+                  <Navbar />
+                </div>
                 <NewsContainer />
               </section>
             )
@@ -46,7 +52,9 @@ class App extends Component {
           <Route exact path='/questions' render={() => {
             return (
               <section>
-                <Navbar />
+                <div>
+                  <Navbar />
+                </div>
                 <QuestionsContainer />
               </section>
             )
