@@ -1,10 +1,10 @@
 import React from 'react';
 import PieChart from 'organism-react-d3-piechart';
 
-const D3PieChartExample = ({sideOne, sideTwo}) => {
+const D3PieChart = ({sideOne, sideTwo}) => {
     let data = [
-        {value: sideTwo, label: 'side two'},
-        {value: sideOne, label: 'side one'},
+        {value: sideTwo, label: "Wrong"},
+        {value: sideOne, label: "Right"},
     ];
     return (
     <PieChart
@@ -14,4 +14,4 @@ const D3PieChartExample = ({sideOne, sideTwo}) => {
     );
 }
 
-export default D3PieChartExample;
+export default D3PieChart;

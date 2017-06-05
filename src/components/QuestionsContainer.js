@@ -1,21 +1,20 @@
 import { connect } from 'react-redux';
-import { increaseScore } from '../actions/actions';
-import { decreaseScore } from '../actions/actions';
+import { increaseSideOne } from '../actions/actions';
+import { increaseSideTwo } from '../actions/actions';
 import Questions from './Questions';
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return { questions: state.questionReducer}
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleScoreIncrease: (id) => {
-      dispatch(increaseScore(id))
+    handleSideOneIncrease: (id) => {
+      dispatch(increaseSideOne(id))
     },
 
-    handleScoreDecrease: (id) => {
-      dispatch(decreaseScore(id))
+    handleSideTwoIncrease: (id) => {
+      dispatch(increaseSideTwo(id))
     }
   }
 }
