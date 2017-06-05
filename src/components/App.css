@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Open Sans', serif;
 }
 
 .App-logo {
@@ -25,4 +25,37 @@
 
 .full-article {
   border: 1px solid black;
+  height: 500px;
+  display: flex;
+  width: 90%;
+  margin: 25px auto;
+}
+
+.img-container {
+  height: 500px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-img {
+  height: 400px;
+  width: 400px;
+}
+
+.article-info {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.article-author {
+  font-weight: bold;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import NewsArticle from './NewsArticle';
 
 const News = ({ news }) => {
-  console.log(news);
   if (!news) {
     return(
       <section>loading...</section>
@@ -13,7 +12,7 @@ const News = ({ news }) => {
     <section>
       {news.map((article, index) => {
         return (
-          <section key={index}>
+          <section key={index} className='news-section'>
             <NewsArticle article={article}/>
           </section>
         )
