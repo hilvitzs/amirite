@@ -2,29 +2,53 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import PersonalQuestionContainer from './PersonalQuestionContainer'
+import SubmitQuestionContainer from './SubmitQuestionContainer';
 import NewsContainer from './NewsContainer';
-import Navbar from './Navbar'
+import Navbar from './Navbar';
+import QuestionsContainer from './QuestionsContainer';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+
   render() {
+    const { history } = this.props;
     return (
       <div className="App">
         <Switch>
           <Route exact path='/' render={() => {
             return (
-              <Navbar />
+              <section>
+                <Navbar />
+                <SubmitQuestionContainer history={history}/>
+              </section>
             )
           }}/>
           <Route exact path='/submitQuestion' render={() => {
             return (
-            <PersonalQuestionContainer />
+              <section>
+                <Navbar />
+                <SubmitQuestionContainer history={history}/>
+              </section>
             )
           }}/>
           <Route exact path='/news' render={() => {
             return (
-              <NewsContainer />
+              <section>
+                <Navbar />
+                <NewsContainer />
+              </section>
+            )
+          }}/>
+          <Route exact path='/questions' render={() => {
+            return (
+              <section>
+                <Navbar />
+                <QuestionsContainer />
+              </section>
             )
           }}/>
         </Switch>
