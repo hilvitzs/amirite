@@ -4,7 +4,6 @@ import { increaseSideTwo } from '../actions/actions';
 import Questions from './Questions';
 
 const mapStateToProps = (state) => {
-  console.log(state.questionReducer);
   return { questions: state.questionReducer}
 }
 
