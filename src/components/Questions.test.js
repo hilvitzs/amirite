@@ -8,8 +8,8 @@ import Questions from './Questions';
 
 describe('QuestionsContainer', () => {
   const mockFn = jest.fn();
-  const handleSideOneIncrease = mockFn();
-  const handleSideTwoIncrease = mockFn();
+  const handleSideOneIncrease = mockFn;
+  const handleSideTwoIncrease = mockFn;
 
   const questions = [
     {
@@ -23,14 +23,7 @@ describe('QuestionsContainer', () => {
   const mockStore = configureMockStore() ({
     handleSideOneIncrease: handleSideOneIncrease,
     handleSideTwoIncrease: handleSideTwoIncrease,
-    questions: [
-      {
-        id: 0,
-        question: 'something',
-        sideOne: 1,
-        sideTwo: 1,
-      }
-    ]
+    questions: questions
   })
 
 
@@ -38,17 +31,21 @@ describe('QuestionsContainer', () => {
     const Container = mount(<Provider store={mockStore}><QuestionsContainer /></Provider>)
     const Component = Container.find(Questions)
 
-    return(
-      Container,
-      Component
+    return (
+      {
+        Container,
+        Component
+      }
     )
   }
 
+
   const { Container, Component } = setup();
 
-  it('should render questions', () => {
+  it.only('should render questions', () => {
+    console.log("********HERE********");
     const wrapper = shallow(<Questions handleSideOneIncrease={mockFn} handleSideTwoIncrease={mockFn} questions={questions} />)
-
+    console.log(wrapper.debug());
     expect(wrapper.length).toEqual(1)
   })
 
