@@ -18,6 +18,7 @@ class App extends Component {
     const { history } = this.props;
     return (
       <div className="App">
+        <h1>AMIRITE?</h1>
         <Switch>
           <Route exact path='/' render={() => {
             return (

@@ -52,10 +52,10 @@ describe('Submit Question', () => {
   })
 
   it('expect handleSubmit to have been called on button click', () => {
-    const button = wrapper.find('button')
+    const button = wrapper.find('.submit-button')
 
     button.simulate('click')
 
-    expect(mockFn).toHaveBeenCalled(1)
+    expect(mockFn).toHaveBeenCalledTimes(1)
   })
 })

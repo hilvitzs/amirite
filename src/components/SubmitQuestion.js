@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class SubmitQuestion extends Component {
   constructor(props) {
-    console.log(props);
     super(props)
 
     this.state = { question: '' }
@@ -10,7 +9,6 @@ class SubmitQuestion extends Component {
 
   render() {
     const { handleSubmit, history } = this.props;
-    console.log(history);
 
     return(
       <section className='submit-container'>

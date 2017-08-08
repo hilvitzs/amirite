@@ -9,7 +9,6 @@ export const addQuestion = (question, id) => {
 }
 
 export const accessNews = (news) => {
-  console.log(news);
   return {
     type: 'ACCESS_NEWS',
     news

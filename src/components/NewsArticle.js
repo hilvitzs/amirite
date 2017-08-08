@@ -4,7 +4,6 @@ import D3PieChart from './ReactExample';
 
 class NewsArticle extends Component {
   constructor(props) {
-    console.log(props);
     super(props)
 
     this.state = {

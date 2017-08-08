@@ -2,7 +2,6 @@ import React from 'react';
 import NewsArticle from './NewsArticle';
 
 const News = ({ news }) => {
-  console.log(news);
   if (!news) {
     return(
       <section>loading...</section>
